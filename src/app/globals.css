@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --ws-bg: #09090b;
+  --ws-panel: #111113;
+  --ws-border: #27272a;
+  --ws-muted: #a1a1aa;
+  --ws-accent: #6366f1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ws-bg);
+  color: #f4f4f5;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- React Flow theming ---------- */
+.react-flow {
+  --xy-background-color: #0c0c0e;
+  --xy-edge-stroke-default: #52525b;
+  --xy-edge-stroke-selected-default: #818cf8;
+  --xy-connectionline-stroke-default: #818cf8;
+  --xy-handle-background-color-default: #a1a1aa;
+  --xy-handle-border-color-default: #18181b;
+  background: #0c0c0e;
+}
+
+.react-flow__attribution {
+  background: transparent;
+  color: #3f3f46;
+}
+
+.react-flow__controls {
+  background: #18181b;
+  border: 1px solid var(--ws-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: #18181b;
+  border-bottom: 1px solid var(--ws-border);
+  color: #e4e4e7;
+}
+
+.react-flow__controls-button:hover {
+  background: #27272a;
+}
+
+.react-flow__minimap {
+  background: #111113;
+  border: 1px solid var(--ws-border);
+  border-radius: 10px;
+}
+
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: #a1a1aa;
+  border: 2px solid #18181b;
+}
+
+.react-flow__handle-connecting {
+  background: #818cf8;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #818cf8;
+}
+
+.react-flow__node.selected {
+  outline: none;
+}
+
+/* ---------- Editor chrome ---------- */
+.ws-panel {
+  background: var(--ws-panel);
+  border-color: var(--ws-border);
+}
+
+.ws-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.ws-scroll::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 999px;
+  border: 2px solid var(--ws-panel);
+}
+
+.ws-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ws-grid-bg {
+  background-image: radial-gradient(#27272a 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* ---------- CodeMirror ---------- */
+.cm-editor {
+  font-size: 12.5px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cm-editor.cm-focused {
+  outline: none;
+}
+
+.cm-gutters {
+  background: #0b0b0d !important;
+  border-right: 1px solid #27272a !important;
+}
